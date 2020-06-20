@@ -17,6 +17,14 @@ export class LoadingScene extends Scene {
     this.load.image("character-red", "character_squareRed.png");
     this.load.image("character-yellow", "character_squareYellow.png");
     this.load.image("tile-grass", "tile_grass.png");
+
+    this.load.promise(
+      "test",
+      new Promise((resolve, reject) => {
+        // setTimeout(() => resolve({ message: "success" }), 1000);
+        setTimeout(() => reject("Promise errror!"), 1000);
+      })
+    );
   }
 
   public create() {

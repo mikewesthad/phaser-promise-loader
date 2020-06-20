@@ -1,5 +1,8 @@
 import Phaser, { Game } from "phaser";
 import { SceneNames, LoadingScene, MainScene } from "./scenes";
+import InstallPromiseLoader from "./promise-loader/install";
+
+InstallPromiseLoader();
 
 const game = new Game({
   type: Phaser.AUTO,
